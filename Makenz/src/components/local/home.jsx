@@ -6,6 +6,9 @@ import barbing from '@/assets/barbing.jpg';
 import barbing2 from '@/assets/barbing2.jpg';
 import outils from '@/assets/outils.jpg';
 import arrowSvg from '@/assets/arrow-right-short.svg';
+import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
+import TypingAnimation from "@/components/magicui/typing-animation";
+
 
 export default function Home() {
     return (
@@ -23,15 +26,21 @@ export default function Home() {
                     url(${homeCover})`,
                     }}
                 >
-                    <h1 className='relative top-16 text-white text-5xl font-bold stroke-white'>
-                        Makenz
-                    </h1>
+
+
+                    <TypingAnimation
+                        className="relative top-16 text-white text-5xl font-bold stroke-white"
+                        text="Makenz"
+                    />
 
                     <a href="#" className='relative bottom-56 bg-custom text-white w-60 h-10 rounded font-semibold flex items-center justify-center mt-14'>Prendre un rendez-vous</a>
                 </div>
             </section>
 
             <section className='h-3/4 flex flex-col items-center justify-evenly mb-9'>
+
+
+
                 <h2
                     className='text-white text-2xl font-bold underline decoration-custom decoration-8 underline-offset-0'
                     style={{ textDecorationSkipInk: 'none' }}
@@ -92,10 +101,12 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className='h-1/4 flex items-center justify-center'>
-                <h1 className='text-white text-5xl font-bold'>
-                    Makenz
-                </h1>
+            <section className='h-1/6 flex items-center justify-center'>
+                <VelocityScroll
+                    text="Makenz"
+                    default_velocity={5}
+                    className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+                />
             </section>
         </>
     );
