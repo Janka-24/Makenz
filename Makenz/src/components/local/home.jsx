@@ -15,24 +15,27 @@ export default function Home() {
 
             <section className='h-screen'>
                 <div
-                    className='h-full bg-cover bg-center flex flex-col items-center justify-center'
+                    className='h-full bg-cover bg-center flex flex-col items-center justify-around'
                     style={{
                         backgroundImage: `linear-gradient(to bottom, 
-                    rgba(0, 0, 0, 1) 0%,          
-                    rgba(0, 0, 0, 0.4) 70%,       
-                    rgba(0, 0, 0, 0.8) 80%,
-                    rgba(0, 0, 0, 0.9) 90%,       
-                    rgba(0, 0, 0, 1) 100%),      
-                    url(${homeCover})`,
+            rgba(0, 0, 0, 1) 0%,          
+            rgba(0, 0, 0, 0.4) 70%,       
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 0.9) 90%,       
+            rgba(0, 0, 0, 1) 100%),      
+            url(${homeCover})`,
                     }}
                 >
                     <TypingAnimation
                         className="text-white text-5xl font-bold stroke-white lg:text-8xl"
                         text="Makenz"
                     />
-                    <a href="#" className='bg-custom text-white w-60 h-10 rounded font-semibold flex items-center justify-center lg:min-w-96 lg:min-h-16 lg:text-xl mt-8'>Prendre un rendez-vous</a>
+                    <a href="#" className='bg-custom text-white w-60 h-10 rounded font-semibold flex items-center justify-center lg:min-w-96 lg:min-h-16 lg:text-xl mt-16  xl:min-w-72 xl:min-h-14 xl:text-lg'>
+                        Prendre un rendez-vous
+                    </a>
                 </div>
             </section>
+
 
 
             <section className='flex flex-col items-center gap-20 justify-evenly p-6'>
@@ -64,40 +67,83 @@ export default function Home() {
             </section>
 
 
-            <section className="flex items-center justify-center bg-slate-200 py-8">
-                <div className="grid grid-cols-4 grid-row-2 gap-4 max-w-4xl">
-                    <div className='col-span-4 row-span-1'>
+
+            {/* <section className="flex items-center justify-center bg-slate-200 py-8">
+                <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-4xl">
+                    <div className="col-span-4 row-span-1">
                         <img
                             src={outils}
-                            alt="image"
-                            className='object-cover' />
+                            alt="Outils de coiffure"
+                            className="object-cover"
+                        />
                     </div>
-                    <div className='col-span-2 row-span-1'>
+                    <div className="col-span-2 row-span-1">
                         <img
                             src={saloon}
-                            alt="image"
-                            className='object-cover'
+                            alt="Salon de coiffure"
+                            className="object-cover"
                         />
                     </div>
-
-                    <div className='col-span-2 row-span-2'>
+                    <div className="col-span-2 row-span-2">
                         <img
                             src={barbing2}
-                            alt="image"
-                            className='object-cover'
+                            alt="Coiffure en cours"
+                            className="object-cover"
+
+                        />
+                    </div>
+                    <div className="col-span-2 row-span-1">
+                        <img
+                            src={barbing}
+                            alt="Outils de rasage"
+                            className="object-cover"
 
                         />
                     </div>
 
-                    <div className='col-span-2 row-span-1'>
+
+                </div>
+            </section> */}
+
+
+
+            <section className="flex items-center justify-center h-[60vh] sm:h-[70vh] w-full p-4">
+                <div className="grid grid-cols-12 gap-2 grid-rows-12 w-full max-w-4xl h-full sm:w-3/4 lg:w-3/4 md:w-5/6">
+                    <div className="col-span-12 row-span-2">
+                        <img
+                            src={outils}
+                            alt="Outils de rasage"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="col-span-6 row-span-5 bg-green-500">
+                        <img
+                            src={saloon}
+                            alt="Outils de rasage"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="col-span-6 row-span-10 bg-yellow-500">
+                        <img
+                            src={barbing2}
+                            alt="Outils de rasage"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="col-span-6 row-span-5 bg-orange-500">
                         <img
                             src={barbing}
-                            alt="image"
-                            className='object-cover'
+                            alt="Outils de rasage"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
             </section>
+
+
+
+
+
 
 
 
