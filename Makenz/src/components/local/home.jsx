@@ -150,7 +150,7 @@ export default function Home() {
             <section className='h-1/6 flex items-center justify-center sm:h-1/5 py-12 '>
                 <VelocityScroll
                     text="Makenz"
-                    default_velocity={5}
+                    default_velocity={18}
                     className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white sm:text-6xl md:leading-[5rem]"
                 />
             </section>
