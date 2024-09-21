@@ -1,17 +1,11 @@
-import logo from '@/assets/logo.png';
-import homeCover from '@/assets/homeCover.jpg';
 import saloon from '@/assets/saloon.jpg';
-import barber from '@/assets/barber.png';
-import barbing from '@/assets/barbing.jpg';
 import barbing2 from '@/assets/barbing2.jpg';
-import outils from '@/assets/outils.jpg';
-import arrowSvg from '@/assets/arrow-right-short.svg';
-import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
-import TypingAnimation from "@/components/magicui/typing-animation";
+import logo from '@/assets/logo.png';
+
 
 export default function About() {
     return (
-        <main className='flex flex-col items-center'>
+        <main className='flex flex-col items-center gap-10'>
 
             <section className='h-[75vh] w-full'>
                 <div
@@ -29,43 +23,55 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="h-fit w-[90%] flex flex-col items-center gap-10 bg-slate-900">
-                <h2 className="font-display text-center text-7xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white sm:text-6xl md:leading-[5rem]"
-                    style={{ textDecorationSkipInk: 'none' }}>MAKENZ               </h2>
-                <p className="text-white text-justify font-thin"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. </p>
-            </section>
-
-            <section className="w-[90%] flex flex-col md:flex-row justify-between bg-slate-950">
-
-                <ol class="relative border-s border-gray-200 dark:border-gray-700">
-                    <li class="mb-3 ms-4">
-                        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                        <h3 class="text-lg font-semibold text-white">Solopreneur</h3>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
-                    </li>
-                    <li class="mb-10 ms-4">
-                        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                        <h3 class="text-lg font-semibold text-white">LifeStyle</h3>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
-                    </li>
-                    <li class="ms-4">
-                        <div class="absolute w-3 h-3 bg-orange-600 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                        <h3 class="text-lg font-semibold text-white">Clean Cut</h3>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
-                    </li>
-                </ol>
-
-
+            <section
+                className="h-fill w-[90%] flex flex-col items-center gap-24 relative overflow-hidden" // Ajoutez overflow-hidden
+                style={{
+                    backgroundImage: `url(${logo})`,
+                    backgroundSize: 'cover', // Couvre la section
+                    backgroundPosition: 'center', // Positionnez l'image à droite
+                    width: '100%', // Assurez-vous que la section prend toute la largeur
+                }}
+            >
+                <div className="relative z-10 text-center"> {/* Conteneur pour le texte */}
+                    <h2 className="font-display text-7xl font-bold text-white sm:text-9xl"
+                        style={{ textDecorationSkipInk: 'none' }}>MAKENZ</h2>
+                    <p className="text-white text-justify tracking-wide font-thin sm:text-2xl text-xl">
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                        Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte.
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                    </p>
+                </div>
             </section>
 
 
 
+            <section className="h-screen w-[90%] flex flex-row justify-around items-center gap-20">
+                <div className="w-full h-full flex flex-col items-center lg:w-1/2">
+                    <h1 className="font-display text-center text-3xl font-bold text-white self-start lg:text-4xl">Parcours</h1>
+                    <div className="relative w-[4px] h-3/4 bg-gradient-to-b from-transparent to-white lg:w-[3px]">
+                        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2">
+                            <div className="relative w-8 h-8 bg-white rounded-full ring-2 ring-white ring-offset-4 ring-offset-black lg:w-10 lg:h-10"></div>
+                            <p className="absolute left-16 top-1/2 transform -translate-y-1/2 text-white z-10 text-base sm:text-lg lg:text-xl">Solopreneur</p>
+                            <p className="w-[20vw] absolute left-16 transform text-white font-thin z-10 text-sm sm:text-base lg:text-lg">2018 - 2019</p>
+                        </div>
 
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div className="relative w-8 h-8 bg-white rounded-full ring-2 ring-white ring-offset-4 ring-offset-black lg:w-10 lg:h-10"></div>
+                            <p className="absolute left-16 top-1/2 transform -translate-y-1/2 text-white z-10 text-base sm:text-lg lg:text-xl">LifeStyle</p>
+                            <p className="w-[20vw] absolute left-16 transform text-white font-thin z-10 text-sm sm:text-base lg:text-lg">2020 - 2022</p>
+                        </div>
 
+                        <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2">
+                            <div className="relative w-8 h-8 bg-orange-600 rounded-full ring-2 ring-white ring-offset-4 ring-offset-black lg:w-10 lg:h-10"></div>
+                            <p className="absolute left-16 top-1/2 transform -translate-y-1/2 text-white z-10 text-base sm:text-lg lg:text-xl">CleanCut</p>
+                            <p className="w-[20vw] absolute left-16 transform text-white font-thin z-10 text-sm sm:text-base lg:text-lg">2022 - 2025</p>
+                        </div>
+                    </div>
+                </div>
 
+                <img src={saloon} alt="makenz" className="rounded-lg w-1/4 h-fit hidden lg:flex" />
+            </section>
 
         </main>
     );
 }
-
-

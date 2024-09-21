@@ -62,49 +62,9 @@ export default function Home() {
             <section className='flex flex-col items-start pl-6 lg:pl-40 gap-20'>
                 <h2 className='text-white text-3xl font-bold underline decoration-custom decoration-8 underline-offset-0 lg:text-4xl' style={{ textDecorationSkipInk: 'none' }}>À propos                 </h2>
                 <p className='text-white font-extralight w-4/6 whitespace-break-spaces lg:text-xl lg:w-2/6'>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte.</p>
-                <a href="#" className='rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-opacity-30 ring-gray-300 min-w-48 min-h-10 flex items-center justify-evenly font-extraligth text-sm'><p>En savoir plus</p> <img src={arrowSvg} alt="->" className='min-w-6 max-w-9' /></a>
+                <a href="/about" className='rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-opacity-30 ring-gray-300 min-w-48 min-h-10 flex items-center justify-evenly font-extraligth text-sm'><p>En savoir plus</p> <img src={arrowSvg} alt="->" className='min-w-6 max-w-9' /></a>
                 <img src={barber} alt="barber things" className='min-w-56 absolute right-0 opacity-10 -z-10' />
             </section>
-
-
-
-            {/* <section className="flex items-center justify-center bg-slate-200 py-8">
-                <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-4xl">
-                    <div className="col-span-4 row-span-1">
-                        <img
-                            src={outils}
-                            alt="Outils de coiffure"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="col-span-2 row-span-1">
-                        <img
-                            src={saloon}
-                            alt="Salon de coiffure"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="col-span-2 row-span-2">
-                        <img
-                            src={barbing2}
-                            alt="Coiffure en cours"
-                            className="object-cover"
-
-                        />
-                    </div>
-                    <div className="col-span-2 row-span-1">
-                        <img
-                            src={barbing}
-                            alt="Outils de rasage"
-                            className="object-cover"
-
-                        />
-                    </div>
-
-
-                </div>
-            </section> */}
-
 
 
             <section className="flex items-center justify-center h-[60vh] sm:h-[70vh] w-full p-4">

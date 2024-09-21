@@ -142,13 +142,13 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className='h-1/6 flex items-center justify-center sm:h-1/5'>
+            {/* <section className='h-1/6 flex items-center justify-center sm:h-1/5'>
                 <VelocityScroll
                     text="Makenz"
                     default_velocity={5}
                     className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white sm:text-6xl md:leading-[5rem]"
                 />
-            </section>
+            </section> */}
         </>
     );
 }
