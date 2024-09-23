@@ -5,7 +5,7 @@ import logo from '@/assets/logo.png';
 
 export default function About() {
     return (
-        <main className='flex flex-col items-center gap-10'>
+        <main className='flex flex-col items-center gap-20'>
 
             <section className='h-[75vh] w-full'>
                 <div
@@ -24,15 +24,9 @@ export default function About() {
             </section>
 
             <section
-                className="h-fill w-[90%] flex flex-col items-center gap-24 relative overflow-hidden" // Ajoutez overflow-hidden
-                style={{
-                    backgroundImage: `url(${logo})`,
-                    backgroundSize: 'cover', // Couvre la section
-                    backgroundPosition: 'center', // Positionnez l'image à droite
-                    width: '100%', // Assurez-vous que la section prend toute la largeur
-                }}
+                className="h-fill w-[90%] flex flex-col items-center gap-24 relative overflow-hidden"
             >
-                <div className="relative z-10 text-center"> {/* Conteneur pour le texte */}
+                <div className="relative z-10 text-center">
                     <h2 className="font-display text-7xl font-bold text-white sm:text-9xl"
                         style={{ textDecorationSkipInk: 'none' }}>MAKENZ</h2>
                     <p className="text-white text-justify tracking-wide font-thin sm:text-2xl text-xl">
@@ -45,9 +39,14 @@ export default function About() {
 
 
 
-            <section className="h-screen w-[90%] flex flex-row justify-around items-center gap-20">
-                <div className="w-full h-full flex flex-col items-center lg:w-1/2">
+            <section className="h-screen w-[90%] flex flex-row justify-around items-center">
+
+                <div className="w-3/4 h-full flex flex-col items-center lg:w-3/4 bg-slate-100">
                     <h1 className="font-display text-center text-3xl font-bold text-white self-start lg:text-4xl">Parcours</h1>
+                    <img src={saloon} alt="makenz" className="rounded-lg w-auto hidden lg:flex" />
+                </div>
+
+                <div className="w-1/4 h-full flex flex-col items-center lg:w-1/4 bg-slate-400">
                     <div className="relative w-[4px] h-3/4 bg-gradient-to-b from-transparent to-white lg:w-[3px]">
                         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2">
                             <div className="relative w-8 h-8 bg-white rounded-full ring-2 ring-white ring-offset-4 ring-offset-black lg:w-10 lg:h-10"></div>
@@ -69,7 +68,6 @@ export default function About() {
                     </div>
                 </div>
 
-                <img src={saloon} alt="makenz" className="rounded-lg w-1/4 h-fit hidden lg:flex" />
             </section>
 
         </main>
