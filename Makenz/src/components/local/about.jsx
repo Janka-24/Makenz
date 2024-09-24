@@ -70,8 +70,8 @@ export default function About() {
             <section className="h-screen w-[90%] flex lg:flex-row flex-col justify-between items-center md:flex-row">
                 <h1 className="font-display text-center text-3xl font-bold text-white self-start lg:text-4xl absolute">Parcours</h1>
 
-                <div className="w-3/4 mr-10 flex flex-col hidden items-center justify-around md:hidden lg:flex">
-                    <img src={saloon} alt="makenz" className="rounded-lg hidden lg:flex" />
+                <div className="w-3/4 mr-10 flex-col hidden items-center justify-around md:hidden lg:flex">
+                    <img src={saloon} alt="makenz" className="w-[84%] hidden lg:flex" />
                 </div>
 
 
@@ -98,7 +98,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="hidden md:flex w-2/4 sm:flex justify-center items-center h-full lg:hidden">
+                <div className="hidden md:flex w-2/4 justify-center items-center h-full lg:hidden">
                     <img src={saloon} alt="makenz" className="rounded-lg h-3/4 md:hidden" />
                     <img src={saloonChair} alt="makenz" className="rounded-full md:max-h-[70%] hidden md:flex" />
                 </div>
