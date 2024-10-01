@@ -12,7 +12,6 @@ import TypingAnimation from "@/components/magicui/typing-animation";
 export default function Home() {
     return (
         <main className='flex flex-col gap-20'>
-
             <section className='h-screen'>
                 <div
                     className='h-full bg-cover bg-center flex flex-col items-center justify-around'
@@ -30,7 +29,7 @@ export default function Home() {
                         className="text-white text-5xl font-bold stroke-white lg:text-8xl"
                         text="Makenz"
                     />
-                    <a href="#" className='bg-custom text-white w-60 h-10 rounded font-semibold flex items-center justify-center lg:min-w-96 lg:min-h-16 lg:text-xl mt-16  xl:min-w-72 xl:min-h-14 xl:text-lg'>
+                    <a href="/reservation" className='bg-custom text-white w-60 h-10 rounded font-semibold flex items-center justify-center lg:min-w-96 lg:min-h-16 lg:text-xl mt-16  xl:min-w-72 xl:min-h-14 xl:text-lg'>
                         Prendre un rendez-vous
                     </a>
                 </div>
@@ -38,7 +37,7 @@ export default function Home() {
 
 
 
-            <section className='flex flex-col items-center gap-20 justify-evenly p-6'>
+            <section className='flex flex-col items-center gap-20 justify-evenly p-6 -z-10'>
                 <h2
                     className='text-white text-2xl font-bold underline decoration-custom decoration-8 underline-offset-0 sm:text-4xl lg:text-6xl'
                     style={{ textDecorationSkipInk: 'none' }}
@@ -58,13 +57,30 @@ export default function Home() {
                 />
             </section>
 
+            <section className='flex flex-col items-start pl-6 lg:pl-40 gap-20 relative'>
+                <div className="relative w-[5px] h-[5px] -left-[500.49px] top-[80vh] lg:-left-[600.49px] lg:top-[50vh] bg-[#8F0000] shadow-[0px_0px_250px_439px_rgba(113,72,10,0.8)] transform rotate-[-172.77deg] z-0" />
 
-            <section className='flex flex-col items-start pl-6 lg:pl-40 gap-20'>
-                <h2 className='text-white text-3xl font-bold underline decoration-custom decoration-8 underline-offset-0 lg:text-4xl' style={{ textDecorationSkipInk: 'none' }}>À propos                 </h2>
-                <p className='text-white font-extralight w-4/6 whitespace-break-spaces lg:text-xl lg:w-2/6'>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte.</p>
-                <a href="/about" className='rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-opacity-30 ring-gray-300 min-w-48 min-h-10 flex items-center justify-evenly font-extraligth text-sm'><p>En savoir plus</p> <img src={arrowSvg} alt="->" className='min-w-6 max-w-9' /></a>
-                <img src={barber} alt="barber things" className='min-w-56 absolute right-0 opacity-10 -z-10' />
+                <h2 className='text-white text-3xl font-bold underline decoration-custom decoration-8 underline-offset-0 lg:text-4xl' style={{ textDecorationSkipInk: 'none' }}>
+                    À propos
+                </h2>
+
+                <p className='text-white font-extralight w-4/6 whitespace-break-spaces lg:text-xl lg:w-2/6'>
+                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                    Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme
+                    assembla ensemble des morceaux de texte.
+                </p>
+
+                <a href="/about" className='rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-opacity-30 ring-gray-300 min-w-48 min-h-10 flex items-center justify-evenly font-extralight text-sm z-10'>
+                    <p>En savoir plus</p>
+                    <img src={arrowSvg} alt="->" className='min-w-6 max-w-9' />
+                </a>
+
+                <img src={barber} alt="barber things" className='min-w-56 absolute right-0 opacity-15 -z-10' />
             </section>
+
+
+
+
 
 
             <section className="flex items-center justify-center h-[60vh] sm:h-[70vh] w-full p-4">

@@ -11,10 +11,8 @@ import Marquee from "@/components/magicui/marquee";
 
 const images = [saloon, saloonChair, barbing2, homeCover, barber, barbing, outils, logo];
 
-
 const firstRow = images.slice(0, images.length / 2);
 const secondRow = images.slice(images.length / 2);
-
 
 const ImageCard = ({ img }) => {
     return (
@@ -29,11 +27,9 @@ const ImageCard = ({ img }) => {
     );
 };
 
-
-
 export default function About() {
     return (
-        <main className='flex flex-col items-center gap-20'>
+        <main className='flex flex-col items-center gap-20 overflow-x-hidden'>
 
             <section className='h-[75vh] w-full'>
                 <div
@@ -51,9 +47,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section
-                className="h-fill w-[90%] flex flex-col items-center gap-24 relative overflow-hidden"
-            >
+            <section className="h-fill w-[90%] flex flex-col items-center gap-24 relative overflow-hidden">
                 <div className="relative z-10 text-center flex flex-col items-center md:gap-16 gap-8">
                     <h2 className="font-display text-7xl font-bold text-white sm:text-9xl"
                         style={{ textDecorationSkipInk: 'none' }}>MAKENZ</h2>
@@ -65,7 +59,7 @@ export default function About() {
                 </div>
             </section>
 
-
+            <div className="relative w-[5px] h-[5px] -right-[150vw] top-[30vh] sm:top-[50vh] sm:-left-[95vw] lg:top-[50vh] lg:-left-[80vw] xl:top-[50vh] xl:-left-[-65vw] bg-[#8F0000] shadow-[0px_0px_250px_439px_rgba(143,0,0,0.8)] transform rotate-[-172.77deg] z-0" />
 
             <section className="h-screen w-[90%] flex lg:flex-row flex-col justify-between items-center md:flex-row">
                 <h1 className="font-display text-center text-3xl font-bold text-white self-start lg:text-4xl absolute">Parcours</h1>
@@ -73,8 +67,6 @@ export default function About() {
                 <div className="w-3/4 mr-10 flex-col hidden items-center justify-around md:hidden lg:flex">
                     <img src={saloon} alt="makenz" className="w-[84%] hidden lg:flex" />
                 </div>
-
-
 
                 <div className="lg:w-1/4 lg:h-3/4 flex flex-col justify-center items-start pl-8 w-full h-full md:w-2/4">
                     <div className="relative w-[4px] h-[70%] bg-gradient-to-b from-transparent to-white lg:w-[3px]">
@@ -104,11 +96,10 @@ export default function About() {
                 </div>
             </section>
 
-
             <section className="relative w-[90%] flex flex-col items-start py-12 shadow-xl">
                 <h1 className="font-display text-left text-3xl font-bold text-white z-20">Galerie</h1>
 
-                <div className="flex h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-black md:shadow-xl">
+                <div className="flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
                     <Marquee pauseOnHover className="[--duration:20s]">
                         {firstRow.map((img, index) => (
                             <ImageCard key={index} img={img} />
@@ -123,8 +114,6 @@ export default function About() {
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black"></div>
                 </div>
             </section>
-
-
 
         </main>
     );
